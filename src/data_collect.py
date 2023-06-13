@@ -20,8 +20,8 @@ class DataCollector:
         sub_imu = message_filters.Subscriber("/zed/imu/data", Imu)
         sub_odom = message_filters.Subscriber("/jackal_velocity_controller/odom", Odometry)
         sub_odom_filtered = message_filters.Subscriber("/odometry/filtered", Odometry)
-        sud_odom_zed = message_filters.Subscriber("/zed/zed_node/odom", Odometry)
-        sud_odom_path_zed = message_filters.Subscriber("/zed/zed_node/path_odom", Path)
+        sub_odom_zed = message_filters.Subscriber("/zed/zed_node/odom", Odometry)
+        sub_odom_path_zed = message_filters.Subscriber("/zed/zed_node/path_odom", Path)
         sub_gps = message_filters.Subscriber("/navsat/fix", NavSatFix)
 
         # ApproximateTimeSynchronizer to synchronize Image, Imu, Odometry and GPS data
